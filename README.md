@@ -24,6 +24,13 @@ To successfully install Apache Spark on Mac, there are three requirements:
    ```bash
    brew install apache-spark
    ```
+## File location
+If installed from 'brew' Apache Spark will be installed to:
+
+```bash
+/usr/local/Cellar/apache-spark/
+```
+   
    
 ## Errors
   Below is an error which arose from the Java 9 JDK being installed (which is currently unstable with Apache Spark-2.2.0)

@@ -37,7 +37,7 @@ To setup up PySpark to run in Jupyter, do the following:
   1. Locate the base Apache Spark directory (if you used homebrew on Mac, this will be under */usr/local/Cellar/apache-spark/2.2.0*
   2. Form the base directory, locate and change directory to the ``` cd libexec``` directory. 
   3. Locate and change directory to the configurations directory, under ``` cd conf``` . 
-  4. Ensure Jupyter is installed by running ``` pip install jupyter ```
+  4. Ensure Jupyter is installed by running ```python pip install jupyter ```
   5. Locate and open, or create the file *spark-env.sh* with the following ``` sudo nano spark-env.sh ```.
   6. Paste the following:
     ```bash

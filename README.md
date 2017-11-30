@@ -20,7 +20,7 @@ To successfully install Apache Spark on Mac, there are three requirements:
     ```
     
    3. *Apache Spark*
-   Finally, once both *Java* and *Scala* have been installed, Apache Spark can be installed, again using homebrew. This can be installed with:
+   Finally, once both *Java* and *Scala* have been installed, Apache Spark can be installed, again using homebrew. This can be installed using HomeBrew, by typing the following into terminal:
    ```bash
    brew install apache-spark
    ```
@@ -30,6 +30,23 @@ If installed from 'brew' Apache Spark will be installed to:
 ```bash
 /usr/local/Cellar/apache-spark/
 ```
+
+## Run PySpark in Jupyter notebook 
+PySpark can be run in a Jupyter notebook to allow for quick prototyping of PySpark code. 
+To setup up PySpark to run in Jupyter, do the following:
+  1. Locate the base Apache Spark directory (if you used homebrew on Mac, this will be under */usr/local/Cellar/apache-spark/2.2.0*
+  2. Form the base directory, locate and change directory to the ``` cd libexec``` directory. 
+  3. Locate and change directory to the configurations directory, under ``` cd conf``` . 
+  4. Ensure Jupyter is installed by running ``` pip install jupyter ```
+  5. Locate and open, or create the file *spark-env.sh* with the following ``` sudo nano spark-env.sh ```.
+  6. Paste the following:
+    ```bash
+    export PYSPARK_DRIVER_PYTHON=jupyter
+    export PYSPARK_DRIVER_PYTHON_OPTS=notebook
+    ``` 
+  7. Save, this file and return to the base folder */usr/local/Cellar/apache-spark/2.2.0*
+  8. Run ``` pyspark```, a Jupyter notebook (browser). To check the installation, type ```python sc ``` into the first Jupyter cell and click 'run'.
+  
    
    
 ## Errors

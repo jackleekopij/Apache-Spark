@@ -73,5 +73,5 @@ Exception in thread "main" java.lang.NullPointerException
 2. In terminal, run ``` 
 /usr/libexec/java_home -V
         ``` to identify the Java Virtual Machines on your Mac
-3. Run ```bash export JAVA_HOME=`/usr/libexec/java_home -v 1.8` ```. This will set the default Java Virtual Machine to Java 8. 
+3. Run ```export JAVA_HOME=`/usr/libexec/java_home -v 1.8` ```. This will set the default Java Virtual Machine to Java 8. 
 
